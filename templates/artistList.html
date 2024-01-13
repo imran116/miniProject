@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block bodyblock %}
+
+    <div class="container">
+    <h3>Artist Details</h3>
+    <a href="{% url 'edit-artist' obj.pk %}" class="btn btn-primary btn-sm">Edit</a>
+  <a href="{% url 'delete-artist' obj.pk %}" class="btn btn-primary btn-sm">Delete</a>
+    <hr>
+    <ul>
+        <li>First Name: {{ obj.first_name }}</li>
+        <li>Last Name: {{ obj.last_name }}</li>
+        <li>Date of Birth: {{ obj.date_of_birth }}</li>
+    </ul>
+    </div>
+
+
+
+
+{% endblock bodyblock %}
